@@ -15,12 +15,10 @@ body{
 }
 
 .container{
-    background-color: rgba(255, 255, 255, 0.233);
-    border: 2px solid #18186f ;
-    padding: 30px 20px;
+    border: 2px solid white;
+    padding: 30px;
     display: flex;
     align-items: center;
-    border-radius: 5px;
     display: flex;
     width: 60vw;
     flex-direction: column;
@@ -64,12 +62,10 @@ body{
     width: 100%;
     margin-top: 10px;
     border: none;
+    text-decoration: none;
+    text-align: center;
 }
 
-.btn a{
-    text-decoration: none;
-    color: #fff;
-}
 .register-link{
     font-size: 0.8rem;
     width: 100%;
