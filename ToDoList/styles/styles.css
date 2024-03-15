@@ -7,43 +7,51 @@
 
 body{
     height: 100vh;
-    background: linear-gradient(90deg, rgba(24,24,111,1) 0%, rgba(0,212,255,1) 100%) no-repeat;
-    background-size: cover;
+    background: linear-gradient(90deg, #18186f 0%, #00d4ff 100%);
+    background-size: auto 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
+
 
 .container{
     border: 2px solid white ;
     padding: 30px 20px;
-    width: 40%;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    /* min-width: 500px; */
+    width: 80%;
 }
 
 .new-task-container{
+    width: 100%;
     background-color: #fff;
     padding: 30px 20px;
     border-radius: 5px;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
     display: flex;
+    flex-direction: column;
 }
 
 .new-task-container input{
-    flex: 3;
     font-size: 1rem;
     border: 2px solid #d1d3d4;
     border-radius: 5px;
     padding: 12px;
     font-weight: 500;
+    width: 100%;
+    margin-bottom: 8px;
+    text-align: center;
 }
 
 .new-task-container input:focus{
     outline: none;
     border-color: #18186f;
+}
+
+.new-task-container input:focus::placeholder{
+    opacity: 0;
 }
 
 .new-task-button{
@@ -55,7 +63,6 @@ body{
     border: none;
     background-color: #18186f;
     padding: 12px;
-    margin-left: 12px;
     cursor: pointer;
     color: white;
 }

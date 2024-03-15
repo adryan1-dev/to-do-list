@@ -1,8 +1,21 @@
 const inputElement = document.querySelector('.new-task-input')
 const addTaskButton = document.querySelector('.new-task-button')
 const tasksContainer = document.querySelector('.tasks-container')
+const errorMessage = document.querySelector('.error')
 
-const validateInput = () => inputElement.value.trim().length > 0
+tasksContainer.style.display = "none";
+
+const validateInput = () => {
+    const inputIsEmpty = inputElement.value.trim().length === 0
+
+    if(inputIsEmpty){
+        inputElement.classList.add('error')
+    } else {
+        inputElement.classList.remove('error')
+    }
+
+    return !inputIsEmpty
+}
 
 const handleAddTask = () =>{
     const inputIsValid = validateInput()
@@ -13,10 +26,14 @@ const handleAddTask = () =>{
 
     const taskItemContainer = document.createElement('div')
     taskItemContainer.classList.add('task-item')
-
+    
     const taskContent = document.createElement('p')
     taskContent.innerText = inputElement.value
-
+    
+    if (taskItemContainer) { 
+        tasksContainer.style.display = "block";
+    }
+    
     taskContent.addEventListener('click', () => handleClick(taskContent))
 
     const deleteItem = document.createElement('i')
@@ -32,7 +49,8 @@ const handleAddTask = () =>{
 
     inputElement.value = ''
 
-    updateLocalStorage()
+    
+
 }
 
 const handleClick = (taskContent) =>{
@@ -44,7 +62,6 @@ const handleClick = (taskContent) =>{
         }
     }
 
-    updateLocalStorage()
 }
 
 const handleDeleteClick = (taskItemContainer, taskContent) =>{
@@ -57,8 +74,18 @@ const handleDeleteClick = (taskItemContainer, taskContent) =>{
         }
     }
 
-    updateLocalStorage()
+    if (tasksContainer.childNodes.length === 0) {
+        tasksContainer.style.display = "none";
+    }
 }
+
+inputElement.addEventListener('keypress', (event) => {
+    const inputIsValid = validateInput()
+    if(event.key === 'Enter' && inputIsValid){
+        handleAddTask()
+    }
+})
+
 
 const handleInputChange = () =>{
     const inputIsValid = validateInput()
@@ -67,6 +94,7 @@ const handleInputChange = () =>{
         return inputElement.classList.remove('error')
     }
 }
+
 
 addTaskButton.addEventListener('click', () => handleAddTask())
 

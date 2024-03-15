@@ -1,0 +1,77 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    height: 100vh;
+    background-size: cover;
+    background: linear-gradient(90deg, #18186f 0%, #00d4ff 100%) no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    background-color: rgba(255, 255, 255, 0.233);
+    border: 2px solid #18186f ;
+    padding: 30px 20px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    display: flex;
+    width: 60vw;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 800px;
+}
+
+
+.logo{
+    margin-bottom: 10px;
+    max-width: 100%;
+    margin-top: 50px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    width: 100%;
+}
+
+.form label{
+    display: none;
+}
+
+.input{
+    border: 1px solid #18186f;
+    padding: 11px;
+    margin: 10px 0px 10px 0px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.btn{
+    font-size: 1.2rem;
+    background-color: #18186f;
+    color: #fff;
+    padding: 8px;
+    width: 100%;
+    margin-top: 10px;
+    border: none;
+}
+
+.btn a{
+    text-decoration: none;
+    color: #fff;
+}
+.register-link{
+    font-size: 0.8rem;
+    width: 100%;
+    text-align: center;
+}
