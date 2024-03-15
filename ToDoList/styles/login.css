@@ -20,7 +20,7 @@ body{
     display: flex;
     align-items: center;
     display: flex;
-    width: 60vw;
+    width: 80vw;
     flex-direction: column;
     flex-wrap: wrap;
     max-height: 800px;
