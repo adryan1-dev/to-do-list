@@ -11,7 +11,7 @@ body{
     background: linear-gradient(90deg, #18186f 0%, #00d4ff 100%) no-repeat;
     display: flex;
     align-items: center;
-    justify-content: center;
+    flex-direction: column;
 }
 
 .container{
@@ -24,6 +24,8 @@ body{
     flex-direction: column;
     flex-wrap: wrap;
     max-height: 800px;
+    max-width: 500px;    
+
 }
 
 
@@ -31,6 +33,10 @@ body{
     margin-bottom: 10px;
     max-width: 100%;
     margin-top: 50px;
+}
+
+.title{
+    color: #fff;
 }
 
 .form{
@@ -52,6 +58,11 @@ body{
     margin: 10px 0px 10px 0px;
     width: 100%;
     border-radius: 5px;
+}
+
+.input:focus{
+    outline: none;
+    border: 4px solid #00d4ff;
 }
 
 .btn{
